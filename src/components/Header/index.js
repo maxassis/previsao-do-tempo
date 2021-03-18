@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function Header({ background, weather, icon }) {
   return (
-    <LinearGradient style={styles.header} colors={["#1ed6ff", "#97c1ff"]}>
+    <LinearGradient style={styles.header} colors={background}>
       <Text style={styles.date}>{weather.results.date}</Text>
       <Text style={styles.city}>{weather.results.city_name}</Text>
       <Ionicons name={icon.name} color={icon.color} size={150} />
@@ -20,9 +20,14 @@ const styles = StyleSheet.create({
     width: "95%",
     height: "55%",
     alignItems: "center",
+    justifyContent: "center",
     borderRadius: 8,
   },
   date: {
+    color: "#FFF",
+    fontSize: 17,
+  },
+  city: {
     color: "#FFF",
     fontSize: 20,
     fontWeight: "bold",

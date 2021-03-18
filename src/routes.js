@@ -9,8 +9,8 @@ const Drawer = createDrawerNavigator();
 function Routes() {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Minha Cidade" component={Home} />
-      <Drawer.Screen name="Procurar" component={Search} />
+      <Drawer.Screen name="Inicio" component={Home} />
+      <Drawer.Screen name="Pesquisar" component={Search} />
     </Drawer.Navigator>
   );
 }
