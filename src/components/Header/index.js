@@ -10,7 +10,7 @@ export default function Header() {
       <Text style={styles.city}>São Pedro da Aldeia</Text>
       <Ionicons name="cloud" color="#FFF" size={150} />
 
-      <Text style={styles.temp}>30</Text>
+      <Text style={styles.temp}>30°</Text>
     </LinearGradient>
   );
 }

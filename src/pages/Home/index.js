@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView, StyleSheet, FlatList } from "react-native";
+import * as Location from "expo-location";
 
 import Menu from "../../components/Menu";
 import Header from "../../components/Header";
 import Conditions from "../../components/Conditions";
 import Forecast from "../../components/Forecast/index";
+import api, { key } from "../../services/api";
 
 const mylist = [
   {
@@ -90,6 +92,29 @@ const mylist = [
 ];
 
 export default function Home() {
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [weather, setWeather] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      let { status } = await Location.requestPermissionsAsync();
+
+      if (status !== "granted") {
+        serErrorMsg("Permissão Negada para acessar localização");
+        setLoading(false);
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      const response = await api.get(
+        `/weather?key=${key}&lat=${location.coords.latitude}&lon=${location.coords.longitude}`
+      );
+      setWeather(response.data);
+      console.log(response.data);
+    })();
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <Menu />

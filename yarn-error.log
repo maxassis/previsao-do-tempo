@@ -1,5 +1,5 @@
 Arguments: 
-  /snap/node/3790/bin/node /snap/node/3790/bin/yarn.js add expo-linear-gradient@~8.4.0
+  /snap/node/3790/bin/node /snap/node/3790/bin/yarn.js global dir
 
 PATH: 
   /home/max/.local/share/umake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -19,12 +19,12 @@ Trace:
       at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
       at writeOrBuffer (internal/streams/writable.js:358:12)
       at SyncWriteStream.Writable.write (internal/streams/writable.js:303:10)
-      at Object.cursorTo (readline.js:1202:17)
-      at writeOnNthLine (/snap/node/3790/lib/cli.js:49677:14)
-      at Spinner.render (/snap/node/3790/lib/cli.js:97426:48)
-      at Spinner.start (/snap/node/3790/lib/cli.js:97413:10)
-      at ConsoleReporter.activity (/snap/node/3790/lib/cli.js:96959:13)
-      at PackageResolver.<anonymous> (/snap/node/3790/lib/cli.js:65539:52)
+      at ConsoleReporter._log (/snap/node/3790/lib/cli.js:96770:17)
+      at ConsoleReporter.log (/snap/node/3790/lib/cli.js:96758:10)
+      at dir (/snap/node/3790/lib/cli.js:36256:14)
+      at Object.<anonymous> (/snap/node/3790/lib/cli.js:25940:25)
+      at Generator.next (<anonymous>)
+      at step (/snap/node/3790/lib/cli.js:310:30)
 
 npm manifest: 
   {
@@ -41,6 +41,8 @@ npm manifest:
       "@react-navigation/drawer": "^5.12.4",
       "@react-navigation/native": "^5.9.3",
       "expo": "~40.0.0",
+      "expo-linear-gradient": "~8.4.0",
+      "expo-location": "~10.0.0",
       "expo-status-bar": "~1.0.3",
       "react": "16.13.1",
       "react-dom": "16.13.1",
