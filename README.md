@@ -1,5 +1,5 @@
 # App Previsão do Tempo
-App de consulta a previsão do tempo, utilizando a API da ![HG Weather](https://hgbrasil.com/status/weather), construido com React Native e Expo 
+App de consulta a previsão do tempo, utilizando a API da <a href="https://hgbrasil.com/status/weather" target="_blank">HG Weather</a>, construido com React Native e Expo 
 
 
 ## Tecnologias principais
