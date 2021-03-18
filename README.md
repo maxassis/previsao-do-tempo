@@ -23,6 +23,7 @@ dentro da pasta do projeto execute o comando para rodar a aplicação
 
 ## Telas
 
-![](https://images2.imgbox.com/08/91/S6dyNaSu_o.jpg)
+![](https://images2.imgbox.com/38/d6/T7Maty02_o.jpg)
+![](https://images2.imgbox.com/cc/ff/SOCPoPHV_o.jpg)
 
 
